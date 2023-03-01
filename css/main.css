@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: var(--color2);
+    font-family: 'PT Sans', sans-serif;
+}
+
+:root {
+    --color1: #2A324B;
+    --color2: #F8FFF4;
+}
+
+body {
+    background-color: var(--color1);
+}
+
+/* standaard */
+a {
+    font-size: 30px;
+    text-decoration: none;
+    margin: 10px;
+}
+
+h2 {
+    font-size: 70px;
+}
+
+/* navigatie */
+nav {
+    margin-left: 5vw;
+    width: 90vw;
+    height: clamp(50px, 15vh, 100px);
+    border-bottom: 2px solid var(--color2);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
