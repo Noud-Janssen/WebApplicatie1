@@ -19,9 +19,21 @@
             <a href="index.php">Home</a>
             <a href="menu.php">Menu</a>
             <a href="contact.php">Contact</a>
-            <a href="login.php">login</a>
+            <button onclick="toggleLogin()" class="login-button">Login</button>
         </div>
     </nav>
-    <div id="login">asd</div>
+    <div id="login">
+        <form action="">
+            <h4>Username</h4>
+            <input type="text" name="" id="">
+            <h4>Password</h4>
+            <input type="password" name="" id="">
+            <br>
+            <br>
+            <input type="submit" value="Login">
+        </form>
+        
+    </div>
 </body>
+<script src="js/main.js"></script>
 </html>

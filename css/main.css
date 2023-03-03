@@ -8,17 +8,27 @@
 :root {
     --color1: #2A324B;
     --color2: #F8FFF4;
+    --color3: #4DAA57;
 }
 
 body {
     background-color: var(--color1);
 }
 
-/* standaard */
+/* standard */
 a {
     font-size: 30px;
     text-decoration: none;
     margin: 10px;
+}
+
+.login-button {
+    font-size: 30px;
+    text-decoration: none;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    background: none;
 }
 
 h2 {
@@ -29,7 +39,7 @@ h2 {
 nav {
     margin-left: 5vw;
     width: 90vw;
-    height: clamp(50px, 15vh, 100px);
+    height: 10vh;
     border-bottom: 2px solid var(--color2);
 
     display: flex;
@@ -37,14 +47,32 @@ nav {
     align-items: flex-end;
 }
 
+/*login*/
 #login {
+    display: "none";
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     aspect-ratio: 2 / 3;
     width: auto;
     height: 50vh;
-    background-color: green;
+    background-color: var(--color2);
+    border: 10px solid var(--color3);
     border-radius: 30px;
     border-top-right-radius: 0px;
     position: fixed;
     right: 7.5vw;
-    top: clamp(70px, 15vh, 100px);
+    top: clamp(70px, 20vh, 200px);
+}
+
+h4 {
+    color: var(--color1);
+    width: 100%;
+    text-align: center;
+}
+input {
+    color: var(--color1);
+}
+input[type=submit] {
+    width: 100%;
 }

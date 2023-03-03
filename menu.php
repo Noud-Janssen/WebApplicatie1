@@ -19,8 +19,9 @@
             <a href="index.php">Home</a>
             <a href="menu.php">Menu</a>
             <a href="contact.php">Contact</a>
-            <a href="login.php">login</a>
+            <button onclick="toggleLogin()" class="login-button">Login</button>
         </div>
     </nav>
 </body>
+<script src="js/main.js"></script>
 </html>
