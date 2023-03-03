@@ -36,3 +36,15 @@ nav {
     justify-content: space-between;
     align-items: flex-end;
 }
+
+#login {
+    aspect-ratio: 2 / 3;
+    width: auto;
+    height: 50vh;
+    background-color: green;
+    border-radius: 30px;
+    border-top-right-radius: 0px;
+    position: fixed;
+    right: 7.5vw;
+    top: clamp(70px, 15vh, 100px);
+}

@@ -13,6 +13,14 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,700;1,400&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    <?php echo file_get_contents("nav.php"); ?>
+    <nav>
+        <h2>Menu</h2>
+        <div class="link-wrapper">
+            <a href="index.php">Home</a>
+            <a href="menu.php">Menu</a>
+            <a href="contact.php">Contact</a>
+            <a href="login.php">login</a>
+        </div>
+    </nav>
 </body>
 </html>
