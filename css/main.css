@@ -3,12 +3,17 @@
     margin: 0;
     color: var(--color2);
     font-family: 'PT Sans', sans-serif;
+    box-sizing: border-box;
 }
 
 :root {
     --color1: #2A324B;
     --color2: #F8FFF4;
     --color3: #4DAA57;
+    --color4: #BBA0CA;
+
+    --font1: 8svh;
+    --font2: 4svh;
 }
 
 body {
@@ -17,13 +22,13 @@ body {
 
 /* standard */
 a {
-    font-size: 30px;
+    font-size: var(--font2);
     text-decoration: none;
     margin: 10px;
 }
 
 .login-button {
-    font-size: 30px;
+    font-size: var(--font2);
     text-decoration: none;
     margin: 10px;
     cursor: pointer;
@@ -32,7 +37,7 @@ a {
 }
 
 h2 {
-    font-size: 70px;
+    font-size: var(--font1);
 }
 
 /* navigatie */
@@ -62,10 +67,11 @@ nav {
     border-top-right-radius: 0px;
     position: fixed;
     right: 7.5vw;
-    top: clamp(70px, 20vh, 200px);
+    top: 11svh;
 }
 
 h4 {
+    font-size: calc(var(--font2) / 1.2);
     color: var(--color1);
     width: 100%;
     text-align: center;
@@ -74,5 +80,74 @@ input {
     color: var(--color1);
 }
 input[type=submit] {
+    aspect-ratio: 3 / 1;
+    font-size: var(--font2);
     width: 100%;
+    height: auto;
+    border: none;
+    background-color: var(--color3);
+}
+
+/* menu items */
+.menu-items {
+    width: 90vw;
+    height: auto;
+    margin-left: 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu-item {
+    width: 26%;
+    aspect-ratio: 4 / 2;
+    height: auto;
+    margin: 2%;
+    border-radius: 1vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    color: var(--color1);
+    background-color: var(--color2);
+}
+
+
+
+.title {
+    width: 100%;
+    border-bottom: 0.1rem solid var(--color1);
+    display: flex;
+    justify-content: space-between;
+}
+
+.title> h2 {
+    color: var(--color1);
+    font-size: 2rem;
+}
+
+.description {
+    color: var(--color1);
+    font-size: 1rem;
+    width: 100%;
+    height: 60%;
+}
+
+.vegan-logo {
+    width: 20%;
+    aspect-ratio: 3 / 2;
+    height: auto;
+    background-color: var(--color3);
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transform: translate(500%,-50%);
+}
+
+.vegan-empty {
+    width: 20%;
+    aspect-ratio: 3 / 2;
+    height: auto;
 }

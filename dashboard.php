@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title id="get">Dashboard</title>
     <link rel="stylesheet" href="css/main.css">
     
     <!--font-->
@@ -14,7 +14,7 @@
 </head>
 <body>
     <nav>
-        <h2>Home</h2>
+        <h2>Dashboard</h2>
         <div class="link-wrapper">
             <a href="index.php">Home</a>
             <a href="menu.php">Menu</a>
@@ -33,7 +33,6 @@
             <br>
             <input type="submit" value="Login">
         </form>
-        
     </div>
 </body>
 <script src="js/main.js"></script>
