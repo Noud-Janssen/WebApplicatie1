@@ -40,16 +40,35 @@ h2 {
     font-size: var(--font1);
 }
 
+svg {
+    fill: var(--color2);
+}
+
 /* navigatie */
 nav {
     margin-left: 5vw;
     width: 90vw;
-    height: 10vh;
+    height: 10svh;
+
+    background: var(--color1);
     border-bottom: 2px solid var(--color2);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
 
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+}
+
+#landscape {
+    display: flex;
+}
+
+#mobile {
+    display: none;
 }
 
 /*login*/
@@ -88,10 +107,17 @@ input[type=submit] {
     background-color: var(--color3);
 }
 
+/* js */
+.alive {
+    
+    display: flex;
+}
+
 /* menu items */
 .menu-items {
     width: 90vw;
     height: auto;
+    margin-top: 12svh;
     margin-left: 5vw;
     display: flex;
     flex-wrap: wrap;

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="get">Menu</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/mobile.css">
     
     <!--font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +16,7 @@
 <body>
     <nav>
         <h2>Menu</h2>
-        <div class="link-wrapper">
+        <div id="landscape" class="link-wrapper">
             <a href="index.php">Home</a>
             <a href="menu.php">Menu</a>
             <a href="contact.php">Contact</a>
@@ -23,7 +24,36 @@
             <button onclick="toggleLogin()" class="login-button">Login</button>
         </div>
     </nav>
-    <div id="login">
+    <nav id="mobile">
+        <div class="link-wrapper">
+            <a href="index.php">
+                <?php 
+                    echo file_get_contents("assets/icons/home.svg")
+                ?>
+            </a>
+            <a href="menu.php">
+                <?php 
+                    echo file_get_contents("assets/icons/menu.svg")
+                ?>
+            </a>
+            <a href="contact.php">
+                <?php 
+                    echo file_get_contents("assets/icons/contact.svg")
+                ?>
+            </a>
+            <a href="dashboard.php">
+                <?php 
+                    echo file_get_contents("assets/icons/dashboard.svg")
+                ?>
+            </a>
+            <button onclick="toggleLogin()" class="login-button">
+                <?php 
+                    echo file_get_contents("assets/icons/login.svg")
+                ?>
+            </button>
+        </div>
+    </nav>
+    <div id="login" class="n-v">
         <form action="">
             <h4>Username</h4>
             <input type="text" name="" id="">
@@ -36,22 +66,18 @@
     </div>
     <div class="menu-items">
         <?php 
-            $is_vegan = true;
-            $vegan_div;
-            $name = "item naam";
-            $descr = "hbafjvvjvnkkaseli lsvbweBFlkkvlvlivvILw webhjasgdajssgdflhv;IVieglEWBFLJVB";
-            for ($i = 0; $i < 10; $i++) {
-                if ($is_vegan) {
-                    $vegan_div = "<div class='vegan-logo'>V</div>";
-                    $is_vegan = false;
+            require_once("config.php");
+
+            $sql = "SELECT * FROM menu";
+            $output = $conn->query($sql);
+            while ($result = mysqli_fetch_assoc($output)) {
+                if ($result["vegan"] == 1) {
+                    $vegan_div = "<div class=vegan-logo>V</div>";
                 } else {
-                    $vegan_div = "<div class='vegan-empty'></div>";
-                    $is_vegan = true;
+                    $vegan_div = "<div class=vegan-empty></div>";
                 }
-                $item = "<div class='menu-item'><div class=title><h2>".$name."</h2><h2>€".$i."</h2></div><h2 class='description'>".$descr."</h2>".$vegan_div."</div>";
-                echo $item;
-            }
-            
+                echo "<div class='menu-item'><div class=title><h2>".$result["title"]."</h2><h2>€".$result["price"]."</h2></div><h2 class='description'>".$result["description"]."</h2>".$vegan_div."</div>";
+            }  
         ?>
     </div>
 </body>

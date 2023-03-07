@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/mobile.css">
     
     <!--font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,9 +14,9 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,700;1,400&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    <nav>
+<nav>
         <h2>Home</h2>
-        <div class="link-wrapper">
+        <div id="landscape" class="link-wrapper">
             <a href="index.php">Home</a>
             <a href="menu.php">Menu</a>
             <a href="contact.php">Contact</a>
@@ -23,7 +24,36 @@
             <button onclick="toggleLogin()" class="login-button">Login</button>
         </div>
     </nav>
-    <div id="login">
+    <nav id="mobile">
+        <div class="link-wrapper">
+            <a href="index.php">
+                <?php 
+                    echo file_get_contents("assets/icons/home.svg")
+                ?>
+            </a>
+            <a href="menu.php">
+                <?php 
+                    echo file_get_contents("assets/icons/menu.svg")
+                ?>
+            </a>
+            <a href="contact.php">
+                <?php 
+                    echo file_get_contents("assets/icons/contact.svg")
+                ?>
+            </a>
+            <a href="dashboard.php">
+                <?php 
+                    echo file_get_contents("assets/icons/dashboard.svg")
+                ?>
+            </a>
+            <button onclick="toggleLogin()" class="login-button">
+                <?php 
+                    echo file_get_contents("assets/icons/login.svg")
+                ?>
+            </button>
+        </div>
+    </nav>
+    <div id="login" class="n-v">
         <form action="">
             <h4>Username</h4>
             <input type="text" name="" id="">
@@ -33,7 +63,6 @@
             <br>
             <input type="submit" value="Login">
         </form>
-        
     </div>
 </body>
 <script src="js/main.js"></script>

@@ -1,0 +1,40 @@
+@media only screen and (max-width: 600px) {
+    :root {
+        --color1: #2A324B;
+        --color2: #F8FFF4;
+        --color3: #4DAA57;
+        --color4: #BBA0CA;
+    
+        --font1: 8vw;
+        --font2: 2vw;
+    }
+
+    nav {
+        height: 8svh;
+    }
+
+    #landscape {
+        display: none;
+    }
+
+    #mobile {
+        display: flex;
+        top: auto;
+        bottom: 0;
+        border-top: 2px solid var(--color2);
+    }
+
+    .link-wrapper {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .menu-items {
+        margin-top: 10svh;
+        flex-direction: column;
+    }
+    .menu-item {
+        width: 80%;
+    }
+  }
