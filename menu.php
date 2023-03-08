@@ -67,10 +67,10 @@
     <div class="menu-items">
         <?php 
             require_once("config.php");
+            
+            $resultSet = $conn->query("SELECT * FROM menu ORDER BY title");
 
-            $sql = "SELECT * FROM menu";
-            $output = $conn->query($sql);
-            while ($result = mysqli_fetch_assoc($output)) {
+            while ($result = $resultSet->fetch()) {
                 if ($result["vegan"] == 1) {
                     $vegan_div = "<div class=vegan-logo>V</div>";
                 } else {

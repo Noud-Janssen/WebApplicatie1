@@ -1,8 +1,12 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "webapplicatie1";
+$dsn = 'mysql:dbname=webapplicatie1;host=127.0.0.1';
+$user = 'root';
+$password = '';
 
-$conn = new mysqli($servername, $username, $password, $database);
+try {
+    $conn = new PDO($dsn, $user, $password);
+} catch (PDOException $e) {
+    echo $e;
+    echo "<script type='text/javascript'>alert('Verbinding mislukt!');</script>";
+}
 ?>

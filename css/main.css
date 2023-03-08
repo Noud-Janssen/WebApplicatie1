@@ -36,12 +36,31 @@ a {
     background: none;
 }
 
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
 h2 {
     font-size: var(--font1);
 }
 
 svg {
     fill: var(--color2);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  width: 50%;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  width: 50%;
 }
 
 /* navigatie */
@@ -73,7 +92,7 @@ nav {
 
 /*login*/
 #login {
-    display: "none";
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -87,6 +106,8 @@ nav {
     position: fixed;
     right: 7.5vw;
     top: 11svh;
+
+    z-index: 100;
 }
 
 h4 {
@@ -110,7 +131,7 @@ input[type=submit] {
 /* js */
 .alive {
     
-    display: flex;
+    display: flex !important;
 }
 
 /* menu items */
@@ -176,4 +197,152 @@ input[type=submit] {
     width: 20%;
     aspect-ratio: 3 / 2;
     height: auto;
+}
+
+/* dashboard */
+
+#close-form {
+    position: fixed;
+    right: 10%;
+    top: 15svh;
+    width: 4%;
+    aspect-ratio: 1 / 1 ;
+    background-color: var(--color2);
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+
+#close-form > h3 {
+    color: var(--color1);
+}
+
+.back-form {
+    width: 60%;
+    height: 80%;
+    position: fixed;
+    top: 15svh;
+    left: 25%;
+
+    padding: 1%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+ 
+#add-item-btn {
+    width: 40%;
+    aspect-ratio: 5 / 1;
+    font-size: var(--font2);
+    color: var(--color1);
+    background-color: var(--color2);
+    border: none;
+    cursor: pointer;
+}
+#add-item-btn:hover {
+    background-color: var(--color3);
+}
+
+#sidebar {
+    min-height: 90svh;
+    width: 15%;
+    background-color: white;
+    margin-top: 10svh;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.info {
+    display: none;
+}
+
+#edit {
+    width: 60%;
+    height: 80%;
+    position: fixed;
+    top: 15svh;
+    left: 25%;
+    background-color: var(--color2);
+
+    border-radius: 10px;
+    padding: 1%;
+
+    display: none;
+    flex-wrap: wrap;
+}
+
+.item {
+    background: none;
+    color: var(--color1);
+    font-size: var(--font2);
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 10%;
+
+    cursor: pointer;
+}
+
+.selected {
+    text-decoration: underline;
+}
+
+.input-box {
+    width: 40%;
+    height: 20%;
+    margin: 5%;
+}
+
+.item:hover {
+    background-color: var(--color3);
+}
+
+.input-box > h2 {
+    color: var(--color1);
+}
+
+.input-box > input {
+    font-size: calc(var(--font2) * 0.8);
+    width: 100%;
+    height: 50%;
+    border: var(--color1) 2px solid;
+    background-color: var(--color2);
+}
+.input-box > input[type=number] {
+    width: 50%;
+    text-align: center;
+}
+
+.input-box > input:focus {
+    outline: none;
+    box-shadow: -4px 0px var(--color1);
+}
+
+.input-box > input[type="checkbox"] {
+    margin-top: 2.5%;
+}
+
+.input-box > input[type="checkbox"]:focus {
+    box-shadow: none;
+}
+
+.input-box > input[type="submit"]:hover {
+    background-color: var(--color3);
+    cursor: pointer;
+}
+
+#id-view {
+    color: var(--color1);
+    text-align: center;
+}
+
+#description {
+    width: 100%;
 }
