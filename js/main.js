@@ -15,6 +15,8 @@ function select(id) {
     document.querySelector("#description-of-pizza").value = document.querySelector("#" + id).dataset.description
     document.querySelector("#price-of-pizza").value = document.querySelector("#" + id).dataset.price
     document.querySelector("#id-view").innerHTML = id
+    document.querySelector("#id-value").value = id.split("-").pop();
+    console.log(document.querySelector("#id-value").value)
     if (document.querySelector("#" + id).dataset.vegan == 1) {
         document.querySelector("#vegan-of-pizza").checked = true
     } else {

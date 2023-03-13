@@ -68,7 +68,24 @@
         <?php 
             require_once("config.php");
 
-            $resultSet = $conn->query("SELECT * FROM menu ORDER BY title");
+            if(isset($_POST['delete'])) {
+                $conn->query("DELETE FROM menu where id = ".$_POST['id'].";");
+            }
+
+            if(isset($_POST['add-item'])) {
+                $conn->query("INSERT INTO menu(title,description,price,vegan) VALUES('[EMPTY]','',0,0);");
+            }
+
+            if(isset($_POST['submit'])) {
+                $vegan_numb = 0;
+                if (isset($_POST['vegan'])) {
+                    $vegan_numb = 1;
+                }
+                $conn->query("UPDATE menu
+                SET title = '".$_POST['title']."', description = '".$_POST['description']."', price = '".$_POST['price']."', vegan = '".$vegan_numb."'  WHERE id = ".$_POST['id'].";");
+            };
+
+            $resultSet = $conn->query("SELECT * FROM menu ORDER BY title != '[EMPTY]', title");
 
             $i = 0;
             while ($result = $resultSet->fetch()) {
@@ -82,33 +99,35 @@
             }  
         ?>
     </div>
-    <div class="back-form">
+    <form class="back-form" method="post">
         <h2>Select item</h2>
         <h3>or</h3>
-        <button id="add-item-btn">Add item</button>
-    </div>
+        <input type="submit" name="add-item" id="add-item-btn" value="add item"></input>
+    </form>
         
-    <form action="" id="edit">
-        <button id="close-form"><h3>X</h3></button>
+    <form action="" method="post" id="edit">
+        <a href="dashboard.php" id="close-form"><h3 onclick="close()">X</h3></a>
         <div class="input-box">
             <h2>Title:</h2>
-            <input type="text" name="" id="name-of-pizza" value="">
+            <input type="text" name="title" id="name-of-pizza" value="">
         </div>
         <div class="input-box">
             <h2>Price:</h2>
-            <input type="number" name="" id="price-of-pizza">
+            <input type="number" name="price" id="price-of-pizza">
         </div>
         <div class="input-box" id="description">
             <h2>Description:</h2>
-            <input type="text" name="" id="description-of-pizza">
+            <input type="text" name="description" id="description-of-pizza">
         </div>
         <div class="input-box row">
             <h2>Vegan:</h2>
-            <input type="checkbox" name="" id="vegan-of-pizza">
+            <input type="checkbox" name="vegan" id="vegan-of-pizza">
         </div>
-        <div class="input-box">
-            <input type="submit" name="" id="" value="Update">
+        <div class="input-box" id="buttons-box">
+            <input type="submit" name="submit" id="" value="Update">
+            <input type="hidden" name="id" id="id-value">
             <p id="id-view"></p>
+            <input type="submit" name="delete" id="delete" value="Delete">
         </div>
     </form>
 

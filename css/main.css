@@ -11,6 +11,7 @@
     --color2: #F8FFF4;
     --color3: #4DAA57;
     --color4: #BBA0CA;
+    --color5: #F15025;
 
     --font1: 8svh;
     --font2: 4svh;
@@ -306,6 +307,7 @@ input[type=submit] {
 
 .input-box > h2 {
     color: var(--color1);
+    font-size: var(--font1);
 }
 
 .input-box > input {
@@ -336,6 +338,14 @@ input[type=submit] {
 .input-box > input[type="submit"]:hover {
     background-color: var(--color3);
     cursor: pointer;
+}
+
+#buttons-box {
+    transform: translateY(-25%);
+}
+
+#delete:hover {
+    background: var(--color5);
 }
 
 #id-view {
