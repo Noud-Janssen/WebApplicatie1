@@ -28,6 +28,13 @@ a {
     margin: 10px;
 }
 
+
+
+.nav-margin {
+    height: 10svh;
+    width: 100vw;
+}
+
 .login-button {
     font-size: var(--font2);
     text-decoration: none;
@@ -81,6 +88,15 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+}
+
+h2 > a {
+    font-size: inherit;
+    margin: 0px;
+}
+
+.crumb {
+    font-size: calc(var(--font2));
 }
 
 #landscape {
@@ -201,6 +217,25 @@ input[type=submit] {
 }
 
 /* dashboard */
+.dashboard-links {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5vw;
+    margin-top: 5svh;
+}
+
+.dashboard-links > a {
+    color: var(--color1);
+    background-color: var(--color2);
+    width: 25%;
+    aspect-ratio: 3 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* edit menu */
 
 #close-form {
     position: fixed;
