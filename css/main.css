@@ -28,7 +28,9 @@ a {
     margin: 10px;
 }
 
-
+svg {
+    fill: var(--color2);
+}
 
 .nav-margin {
     height: 10svh;
@@ -152,6 +154,51 @@ input[type=submit] {
 }
 
 /* menu items */
+
+.search-bar {
+    width: clamp(400px, 20vw, 1000px);
+    height: 5svh;
+
+    display: flex;
+
+    background: var(--color1);
+
+    border: 2px solid var(--color2);
+    border-top: none;
+    border-radius: 25px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+
+    position: fixed;
+    top: 10svh;
+    left: calc(50vw - clamp(400px, 20vw, 1000px) / 2);
+    outline: var(--color1) 2px solid;
+}
+
+.search-bar > input {
+    background: none;
+    border: none;
+    color: var(--color2);
+    outline: none;
+}
+
+.search-bar > input[type=text] {
+    text-align: center;
+    font-size: var(--font2);
+    width: 80%;
+}
+
+.search-bar > input[type=submit] {
+    text-align: left;
+    width: 20%;
+    font-size: var(--font2);
+    background-image: url(../assets/icons/search.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
 .menu-items {
     width: 90vw;
     height: auto;

@@ -19,12 +19,30 @@
         require_once('php/login.php');
         $title = 'Menu';
         require_once('php/nav.php');
+        if (isset($_POST['search'])) {
+            echo "<form class='search-bar' method=post>
+            <input type='text' name='search-text' value='".$_POST['search-text']."' id=''></input>
+            <input type='submit' name='search' value=''></input>
+        </form>";
+        } else {
+            echo "<form class='search-bar' method=post>
+                <input type='text' name='search-text' value='' id=''></input>
+                <input type='submit' name='search' value=''></input>
+            </form>";
+        }
+        
+
     ?>
+    
     <div class="menu-items">
         <?php 
             
+            if (isset($_POST['search'])) {
+                $resultSet = $conn->query("SELECT * FROM menu WHERE title LIKE '%{$_POST['search-text']}%' OR description LIKE '%{$_POST['search-text']}%' ORDER BY title;");
+            } else {
+                $resultSet = $conn->query("SELECT * FROM menu ORDER BY title");
+            }
             
-            $resultSet = $conn->query("SELECT * FROM menu ORDER BY title");
 
             while ($result = $resultSet->fetch()) {
                 if ($result["vegan"] == 1) {
