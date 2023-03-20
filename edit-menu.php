@@ -47,19 +47,19 @@
             $i = 0;
             while ($result = $resultSet->fetch()) {
                 $i++;
-                echo "<button id='id-".$result['id']."' 
+                echo "<admin-item id='id-".$result['id']."' 
                 data-title=\"".$result['title']."\" 
                 data-description=\"".$result['description']."\" 
                 data-price=\"".$result['price']."\" 
                 data-vegan=\"".$result['vegan']."\"
-                onclick='select(this.id)' class='item'>".$result['title']."</button>";
+                onclick='select(this.id)' class='item'>".$result['title']."</admin-item>";
             }  
         ?>
     </div>
     <form class="back-form" method="post">
         <h2>Select item</h2>
         <h3>or</h3>
-        <input type="submit" name="add-item" id="add-item-btn" value="add item"></input>
+        <input type="submit" action="" name="add-item" id="add-item-btn" value="add item"></input>
     </form>
         
     <form action="" method="post" id="edit">

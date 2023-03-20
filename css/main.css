@@ -28,6 +28,11 @@ a {
     margin: 10px;
 }
 
+.col-50 {
+    width: 50%;
+
+}
+
 svg {
     fill: var(--color2);
 }
@@ -437,4 +442,53 @@ input[type=submit] {
 
 #description {
     width: 100%;
+}
+
+/* reservering-form */
+#reservering-form {
+    width: 80vw;
+    height: auto;
+    margin-top: 15svh;
+    margin-bottom: 15svh;
+    margin-left: 10vw;
+
+    background-color: var(--color2);
+    border-radius: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.time-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time-box > h4 {
+    width: auto;
+    margin-left: 10px;
+}
+
+.time-wrapper {
+    display: flex;
+}
+
+.time-wrapper > .col-50 > h2 {
+    color: var(--color1);
+}
+
+.bevestig {
+    width: 50%;
+    aspect-ratio: 3/1;
+    margin-left: 25%;
+}
+
+.bevestig > input {
+    height: 100%;
+}
+
+#reservering-message {
+    width: 100%;
+    text-align: center;
 }

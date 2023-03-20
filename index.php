@@ -16,9 +16,9 @@
 <body>
     <?php 
         require_once('php/config.php');
-        require_once('php/login.php');
+        include_once('php/login.php');
         $title = 'Home';
-        require_once('php/nav.php');
+        include_once('php/nav.php');
     ?>
     
 </body>
