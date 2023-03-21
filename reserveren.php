@@ -81,7 +81,12 @@
                 <div class='input-box'>
                     <h2>Email:</h2>
                     <input type='email' name='email' id='' required>
-                </div>";
+                </div>
+                <div class='input-box'>
+                    <h2>Telefoon:</h2>
+                    <input type='number' name='telefoon' id='' required>
+                </div>"
+                ;
                 echo "<div class='bevestig input-box'>
                     <input type='submit' name='nextStep' value='Bevestig reservering'>
                     </div>";
@@ -92,7 +97,7 @@
                 echo "<input type='hidden' name='tijd' value='".$_POST['tijd']."' required>";
                 } elseif ($_POST['step'] >= '4') {
 
-                    $conn->query("");
+                    $conn->query("INSERT INTO reserveringen(name,email,date,aantal,telefoon) VALUES('".$_POST['naam']."','".$_POST['email']."','".$_POST['date']."','".$_POST['aantal']."','".$_POST['telfoon']."');");
                     echo "<div class='input-box' id='reservering-message'><h2 id='reservering-message'>Reservering geplaatst.</h2></div>";
                 }
 

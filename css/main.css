@@ -13,8 +13,8 @@
     --color4: #BBA0CA;
     --color5: #F15025;
 
-    --font1: 8svh;
-    --font2: 4svh;
+    --font1: 4vw;
+    --font2: 2vw;
 }
 
 body {
@@ -491,4 +491,33 @@ input[type=submit] {
 #reservering-message {
     width: 100%;
     text-align: center;
+}
+
+#rooster-reserveringen {
+    margin-top: 15svh;
+    margin-left: 10vw;
+    width: 80vw;
+
+    background-color: var(--color2);
+    border-radius: 10px;
+}
+
+.reservering {
+    color: var(--color1);
+    font-size: var(--font2);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5%;
+}
+
+.reservering > p {
+    color: inherit;
+    width: 50%;
+    overflow: hidden;
+}
+
+.dagHeader {
+    color: var(--color1);
+    width: 100%;
+    border-top: 5px solid var(--color1);
 }
