@@ -23,10 +23,16 @@
 
     <div id="rooster-reserveringen">
     <?php 
+
+    $days = array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saterday");
         
         for ($i = 0; $i < 14; $i += 1) {
             $date = date('Y-m-d', strtotime(' + '.$i.' days'));
-            echo "<h2 class='dagHeader' >".date('D', strtotime(' + '.$i.' days'))."</h2>";
+            echo "<h2 class='dagHeader' >".$days[date('w', strtotime(' + '.$i.' days'))];
+            if ($i == 0) {
+                echo "<span id='td'> today</span>";
+            }
+            echo "</h2>";
             $resultset = $conn->query("SELECT * FROM reserveringen WHERE date = '".$date."';");
             while ($result = $resultset->fetch()) {
                 echo "<div class='reservering'>";

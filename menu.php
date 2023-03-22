@@ -43,6 +43,8 @@
                 $resultSet = $conn->query("SELECT * FROM menu ORDER BY title");
             }
             
+            $i = 0;
+            $pic_n = 1;
 
             while ($result = $resultSet->fetch()) {
                 if ($result["vegan"] == 1) {
@@ -51,6 +53,16 @@
                     $vegan_div = "<div class=vegan-empty></div>";
                 }
                 echo "<div class='menu-item'><div class=title><h2>".$result["title"]."</h2><h2>€".$result["price"]."</h2></div><h2 class='description'>".$result["description"]."</h2>".$vegan_div."</div>";
+
+                if ($i >= 3) {
+                    echo "<div class='menu-item menu-pic pic-".$pic_n."'></div>";
+                    $i = 0;
+                    $pic_n +=1;
+                }
+
+                $i += 1;
+
+
             }  
         ?>
     </div>

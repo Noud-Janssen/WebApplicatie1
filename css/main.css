@@ -7,11 +7,12 @@
 }
 
 :root {
-    --color1: #2A324B;
-    --color2: #F8FFF4;
-    --color3: #4DAA57;
-    --color4: #BBA0CA;
+    --color1: #38302E;
+    --color2: #EEE5E9;
+    --color3: #618B4A;
+    --color4: #0A100D;
     --color5: #F15025;
+    --color6: #A22C29;
 
     --font1: 4vw;
     --font2: 2vw;
@@ -19,6 +20,8 @@
 
 body {
     background-color: var(--color1);
+    background-position: center;
+    background-size: cover;
 }
 
 /* standard */
@@ -26,6 +29,12 @@ a {
     font-size: var(--font2);
     text-decoration: none;
     margin: 10px;
+}
+
+form {
+    background: url('../assets/backgrounds/pizza-bg.png');
+    background-position: center;
+    background-size: cover;
 }
 
 .col-50 {
@@ -158,6 +167,75 @@ input[type=submit] {
     display: flex !important;
 }
 
+/* home */
+#picture-wrapper {
+    margin-top: 20svh;
+    width: 100vw;
+    aspect-ratio: 5 / 1;
+    border-top: 0.5vw solid var(--color2);
+    border-bottom: 0.5vw solid var(--color2);
+
+    background: url(../assets/pictures/piza-banner.jpg);
+    background-size: 200vw;
+    animation-name: scroll;
+    animation-iteration-count: infinite;
+    animation-duration: 35s;
+    animation-timing-function: linear;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: var(--font1);
+    color: var(--color1);
+    background-color: var(--color2);
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.text-field {
+    margin-top: 5svh;
+    margin-bottom: 5svh;
+    margin-left: 5vw;
+    border-radius: 10px;
+    width: 90vw;
+    height: fit-content;
+    background-image: url(../assets/backgrounds/pizza-bg.png);
+    background-size: cover;
+    padding: var(--font1);
+
+    display: flex;
+}
+
+.col-50 > h2 {
+    color: var(--color1);
+    font-size: calc(var(--font2) * 1.3);
+    border-bottom: 2px solid var(--color1);
+    width: fit-content;
+}
+
+.col-50 > p {
+    color: var(--color1);
+    font-size: var(--font2);
+}
+
+p > a {
+    color: var(--color1);
+}
+
+@keyframes scroll {
+    from {
+        background-position: 0vw;
+    }
+    to {
+        background-position: -200vw;
+    }
+}
+
 /* menu items */
 
 .search-bar {
@@ -224,9 +302,28 @@ input[type=submit] {
     padding-right: 2vw;
     color: var(--color1);
     background-color: var(--color2);
+    background: url('../assets/backgrounds/pizza-bg.png');
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    
 }
 
+.pic-1 {
+    background: url(../assets/pictures/pizzapic1.jpg);
+    background-position: center;
+    background-size: cover;
+}
 
+.pic-2 {
+    background: url(../assets/pictures/pizzapic2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.pic-3 {
+    background: url(../assets/pictures/pizzapic3.jpg);
+    background-position: center;
+    background-size: cover;
+}
 
 .title {
     width: 100%;
@@ -322,6 +419,8 @@ input[type=submit] {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    background: none;
 }
  
 #add-item-btn {
@@ -447,9 +546,9 @@ input[type=submit] {
 /* reservering-form */
 #reservering-form {
     width: 80vw;
-    height: auto;
+    height: 80svh;
     margin-top: 15svh;
-    margin-bottom: 15svh;
+    margin-bottom: 5svh;
     margin-left: 10vw;
 
     background-color: var(--color2);
@@ -484,6 +583,15 @@ input[type=submit] {
     margin-left: 25%;
 }
 
+.next-button {
+    width: 20vw !important;
+    aspect-ratio: 3 / 1 !important;
+    height: auto !important;
+    position: absolute;
+    bottom: 10svh;
+    right: 20vw;
+}
+
 .bevestig > input {
     height: 100%;
 }
@@ -508,16 +616,24 @@ input[type=submit] {
     display: flex;
     flex-wrap: wrap;
     padding: 5%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
 .reservering > p {
     color: inherit;
     width: 50%;
     overflow: hidden;
+    
 }
 
 .dagHeader {
     color: var(--color1);
     width: 100%;
-    border-top: 5px solid var(--color1);
+    border-top: 20px solid var(--color1);
+}
+
+#td {
+    color: var(--color1);
+    font-size: var(--font2);
+    padding-left: 10vw;
 }

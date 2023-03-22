@@ -29,7 +29,7 @@
                         <input type='date' name='date' id='' value='".date("Y-m-d")."' required>
                     </div>";
                     echo "<div class='input-box'>
-                    <input type='submit' name='nextStep' value='Verder' required>
+                    <input type='submit' class='next-button' name='nextStep' value='Verder' required>
                     </div>";
 
                     //submitted info
@@ -41,7 +41,7 @@
                     </div>
                     <div class='col-50'>
                     <div class='time-box'>
-                        <input type='radio' name'tijd' id='' value='17:00' required='required'>
+                        <input type='radio' name='tijd' id='' value='17:00'>
                         <h4>17:00</h4>
                     </div>
                     <div class='time-box'>
@@ -61,13 +61,13 @@
                         <h4>19:00</h4>
                     </div>
                     <div class='time-box'>
-                        <input type='radio' name='tijd' id='' value='19:30'>
+                        <input type='radio' name='tijd' id='' value='19:30' required='required'>
                         <h4>19:30</h4>
                     </div></div>
                     
                 </div>";
                 echo "<div class='input-box'>
-                    <input type='submit' name='nextStep' value='Verder'>
+                    <input type='submit' class='next-button' name='nextStep' value='Verder'>
                     </div>";
 
                 //submitted info
@@ -84,11 +84,11 @@
                 </div>
                 <div class='input-box'>
                     <h2>Telefoon:</h2>
-                    <input type='number' name='telefoon' id='' required>
+                    <input type='text' name='telefoon' id='' required>
                 </div>"
                 ;
                 echo "<div class='bevestig input-box'>
-                    <input type='submit' name='nextStep' value='Bevestig reservering'>
+                    <input type='submit' class='next-button' name='nextStep' value='Bevestig reservering'>
                     </div>";
 
                 //submitted info
@@ -97,7 +97,7 @@
                 echo "<input type='hidden' name='tijd' value='".$_POST['tijd']."' required>";
                 } elseif ($_POST['step'] >= '4') {
 
-                    $conn->query("INSERT INTO reserveringen(name,email,date,aantal,telefoon) VALUES('".$_POST['naam']."','".$_POST['email']."','".$_POST['date']."','".$_POST['aantal']."','".$_POST['telfoon']."');");
+                    $conn->query("INSERT INTO reserveringen(name,email,date,aantal,telefoon) VALUES('".$_POST['naam']."','".$_POST['email']."','".$_POST['date']."','".$_POST['aantal']."','".$_POST['telefoon']."');");
                     echo "<div class='input-box' id='reservering-message'><h2 id='reservering-message'>Reservering geplaatst.</h2></div>";
                 }
 
@@ -108,7 +108,7 @@
                     <input type='number' min='1' max='10' name='aantal' id='' value=1 required>
                 </div>";
                 echo "<div class='input-box'>
-                <input type='submit' name='nextStep' value='Verder'>
+                <input type='submit' class='next-button' name='nextStep' value='Verder'>
                 </div>";
             }
         ?>
