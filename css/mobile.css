@@ -1,16 +1,16 @@
 @media only screen and (max-width: 600px) {
     :root {
-        --color1: #2A324B;
-        --color2: #F8FFF4;
-        --color3: #4DAA57;
-        --color4: #BBA0CA;
     
         --font1: 8vw;
-        --font2: 2vw;
+        --font2: 4vw;
     }
 
     nav {
         height: 8svh;
+    }
+
+    .nav-margin {
+        height: 4svh;
     }
 
     #landscape {
@@ -36,5 +36,17 @@
     }
     .menu-item {
         width: 80%;
+    }
+
+    /** index **/
+
+    .text-field {
+        flex-direction: column;
+        align-items: center;
+        padding: 10%;
+    }
+
+    #picture-wrapper {
+        margin-top: 10svh;
     }
   }

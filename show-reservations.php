@@ -44,6 +44,8 @@
                 echo "<p>".$result['aantal']."</p>";
                 echo "<p>Telefoon:</p>";
                 echo "<p>".$result['telefoon']."</p>";
+                echo "<p>Tijd:</p>";
+                echo "<p>".$result['tijd']."</p>";
                 echo "</div>";
             }
             

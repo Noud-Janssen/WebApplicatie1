@@ -2,6 +2,7 @@
 $dsn = 'mysql:dbname=webapplicatie1;host=127.0.0.1';
 $user = 'root';
 $password = '';
+session_start();
 
 try {
     $conn = new PDO($dsn, $user, $password);

@@ -1,18 +1,19 @@
 <?php 
     $isLoggedIn = false;
-
-    if (isset($_POST['login']) && $_POST['username'] !== null && $_POST['password'] !== null) {
-        $query = "SELECT * FROM accounts;";
+    if (isset($_POST['logout'])) {
+        session_destroy();
+        header("Location: index.php");
+    }
+    if (isset($_POST['login']) && $_POST['username'] !== "" && $_POST['password'] !== "") {
+        $query = "SELECT * FROM accounts WHERE username = '".$_POST['username']."';";
         $resultset = $conn->query($query);
 
-        while ($result = $resultset->fetch()) {
-            if ($result['username'] == $_POST['username'] && $result['password'] == $_POST['password']) {
-                $isLoggedIn = true;
-                $loginID = $result['id'];
-            }
-            if ($isLoggedIn == false) {
-                echo "bad login";
+        if ($result = $resultset->fetch()) {
+            if ($result['password'] == $_POST['password']) {
+                $_SESSION['userID'] = $result['id'];
             }
         }
+        
     }
+    
 ?>

@@ -8,6 +8,7 @@
 
 :root {
     --color1: #38302E;
+    --color1-trans: #38302e7f;
     --color2: #EEE5E9;
     --color3: #618B4A;
     --color4: #0A100D;
@@ -39,7 +40,6 @@ form {
 
 .col-50 {
     width: 50%;
-
 }
 
 svg {
@@ -93,7 +93,7 @@ nav {
     width: 90vw;
     height: 10svh;
 
-    background: var(--color1);
+    background: var(--color1-trans);
     border-bottom: 2px solid var(--color2);
 
     position: fixed;
@@ -104,6 +104,21 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+}
+
+#logout {
+    background: none;
+    font-size: var(--font2) !important;
+    text-decoration: none !important;
+    margin: 10px !important;
+    padding: 0px !important;
+}
+
+#logout > input {
+    color: var(--color2);
+    background: none;
+    height: 100%;
+    cursor: pointer;
 }
 
 h2 > a {

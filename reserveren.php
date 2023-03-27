@@ -25,7 +25,7 @@
                 echo "<input type='hidden' name='step' value='".($_POST['step'] + 1)."'>";
                 if ($_POST['step'] == '1') {
                     echo "<div class='input-box'>
-                        s<h2>Datum:</h2>
+                        <h2>Datum:</h2>
                         <input type='date' name='date' id='' value='".date("Y-m-d")."' required>
                     </div>";
                     echo "<div class='input-box'>
@@ -97,7 +97,7 @@
                 echo "<input type='hidden' name='tijd' value='".$_POST['tijd']."' required>";
                 } elseif ($_POST['step'] >= '4') {
 
-                    $conn->query("INSERT INTO reserveringen(name,email,date,aantal,telefoon) VALUES('".$_POST['naam']."','".$_POST['email']."','".$_POST['date']."','".$_POST['aantal']."','".$_POST['telefoon']."');");
+                    $conn->query("INSERT INTO reserveringen(name,email,date,aantal,telefoon,tijd) VALUES('".$_POST['naam']."','".$_POST['email']."','".$_POST['date']."','".$_POST['aantal']."','".$_POST['telefoon']."','".$_POST['tijd']."');");
                     echo "<div class='input-box' id='reservering-message'><h2 id='reservering-message'>Reservering geplaatst.</h2></div>";
                 }
 
@@ -116,4 +116,5 @@
         
         
     </form>
+    <script src="js/main.js"></script>
 </body>

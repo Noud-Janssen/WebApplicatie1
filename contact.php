@@ -18,5 +18,6 @@
         require_once('php/login.php');
         $title = 'Contact';
         require_once('php/nav.php');?>
-</body>
+    </body>
+    <script src="js/main.js"></script>
 </html>
