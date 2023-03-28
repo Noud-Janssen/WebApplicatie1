@@ -26,7 +26,8 @@
             
 
             if(isset($_POST['delete'])) {
-                $conn->query("DELETE FROM menu where id = ".$_POST['id'].";");
+                $delete_prepare = $conn->prepare("DELETE FROM menu where id = ?;");
+                $delete_prepare->execute([$_POST['id']]);
             }
 
             if(isset($_POST['add-item'])) {
@@ -38,8 +39,8 @@
                 if (isset($_POST['vegan'])) {
                     $vegan_numb = 1;
                 }
-                $conn->query("UPDATE menu
-                SET title = '".$_POST['title']."', description = '".$_POST['description']."', price = '".$_POST['price']."', vegan = '".$vegan_numb."'  WHERE id = ".$_POST['id'].";");
+                $update_prepare = $conn->prepare("UPDATE menu SET title = ?, description = ?, price = ?, vegan = ? WHERE id = ?;");
+                $update_prepare->execute([$_POST['title'], $_POST['description'], $_POST['price'], $vegan_numb, $_POST['id']]);
             };
 
             $resultSet = $conn->query("SELECT * FROM menu ORDER BY title != '[EMPTY]', title");
@@ -89,5 +90,5 @@
     </form>
 
 </body>
-
+<script src="js/classes.js"></script>
 </html>
