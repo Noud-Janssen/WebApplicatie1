@@ -23,6 +23,22 @@ class adminItem extends HTMLElement {
     }
   }
 
+class adminItemAccount extends HTMLElement {
+    constructor() {
+      super();
+      this.addEventListener("click", function() {
+
+        document.querySelector("#name-of-pizza").value = this.dataset.name
+        document.querySelector("#description-of-pizza").value = this.dataset.password
+        document.querySelector("#id-view").innerHTML = this.id
+        document.querySelector("#id-value").value = this.id.split("-").pop();
+        console.log(document.querySelector("#id-value").value)
+
+        document.querySelector("#edit").style.display = "flex"
+      })
+    }
+}
   
 customElements.define("admin-item", adminItem);
+customElements.define("admin-item-account", adminItemAccount);
   

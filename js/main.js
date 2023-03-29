@@ -27,19 +27,19 @@ function toggleLogin() {
     
 // }
 
-function select_account(id) {
-    items = document.querySelectorAll(".account");
-    for (i = 0; i < items.length; i++) {
-        items[i].classList.remove("selected")
-    }
+// function select_account(id) {
+//     items = document.querySelectorAll(".account");
+//     for (i = 0; i < items.length; i++) {
+//         items[i].classList.remove("selected")
+//     }
     
-    document.querySelector("#" + id).classList.add("selected")
+//     document.querySelector("#" + id).classList.add("selected")
 
-    document.querySelector("#name-of-pizza").value = document.querySelector("#" + id).dataset.name
-    document.querySelector("#description-of-pizza").value = document.querySelector("#" + id).dataset.password
-    document.querySelector("#id-view").innerHTML = id
-    document.querySelector("#id-value").value = id.split("-").pop();
-    console.log(document.querySelector("#id-value").value)
+//     document.querySelector("#name-of-pizza").value = document.querySelector("#" + id).dataset.name
+//     document.querySelector("#description-of-pizza").value = document.querySelector("#" + id).dataset.password
+//     document.querySelector("#id-view").innerHTML = id
+//     document.querySelector("#id-value").value = id.split("-").pop();
+//     console.log(document.querySelector("#id-value").value)
 
-    document.querySelector("#edit").style.display = "flex"
-}
+//     document.querySelector("#edit").style.display = "flex"
+// }

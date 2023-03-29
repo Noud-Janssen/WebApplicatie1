@@ -38,9 +38,11 @@
         <?php 
             
             if (isset($_POST['search'])) {
-                $resultSet = $conn->query("SELECT * FROM menu WHERE title LIKE '%{$_POST['search-text']}%' OR description LIKE '%{$_POST['search-text']}%' ORDER BY title;");
+                $resultSet = $conn->prepare("SELECT * FROM menu WHERE title LIKE ? OR description LIKE ? ORDER BY title;");
+                $resultSet->execute(['%'.$_POST['search-text'].'%', '%'.$_POST['search-text'].'%']);
             } else {
-                $resultSet = $conn->query("SELECT * FROM menu ORDER BY title");
+                $resultSet = $conn->prepare("SELECT * FROM menu ORDER BY title");
+                $resultSet->execute();
             }
             
             $i = 0;

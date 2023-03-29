@@ -558,6 +558,29 @@ p > a {
     width: 100%;
 }
 
+/* contact */
+#contact-form {
+    width: 80vw;
+    height: 80svh;
+    margin-top: 15svh;
+    margin-bottom: 5svh;
+    margin-left: 10vw;
+
+    background-color: var(--color2);
+    border-radius: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#bericht-box {
+    width: 200%;
+    height: 100%;
+    text-align: start;
+    color: var(--color1);
+    resize: none;
+}
+
 /* reservering-form */
 #reservering-form {
     width: 80vw;

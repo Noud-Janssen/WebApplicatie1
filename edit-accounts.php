@@ -43,10 +43,10 @@
             $i = 0;
             while ($result = $resultSet->fetch()) {
                 $i++;
-                echo "<button id='id-".$result['id']."' 
+                echo "<admin-item-account id='id-".$result['id']."' 
                 data-name=\"".$result['username']."\" 
                 data-password=\"".$result['password']."\" 
-                onclick='select_account(this.id)' class='item account'>".$result['username']."</button>";
+                onclick='select_account(this.id)' class='item account'>".$result['username']."</admin-item-account>";
             }  
         ?>
     </div>
@@ -75,5 +75,5 @@
     </form>
 
 </body>
-
+<script src="js/classes.js"></script>
 </html>

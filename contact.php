@@ -18,6 +18,17 @@
         require_once('php/login.php');
         $title = 'Contact';
         require_once('php/nav.php');?>
+        
     </body>
     <script src="js/main.js"></script>
+    <form action="contact.php" method="post" id="contact-form">
+            <h2>Onderwerp</h2>
+            <input type="text" name="onderwerp" id="">
+            <h2>Email</h2>
+            <input type="email" name="email" id="">
+                <h2>Bericht</h2>
+                <textarea name="bericht" id="bericht-box" cols="30" rows="10"></textarea>
+                <input type="submit" value="verstuur">
+        </div>
+    </form>
 </html>
