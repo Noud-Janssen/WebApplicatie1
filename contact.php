@@ -26,9 +26,9 @@
             <input type="text" name="onderwerp" id="">
             <h2>Email</h2>
             <input type="email" name="email" id="">
-                <h2>Bericht</h2>
-                <textarea name="bericht" id="bericht-box" cols="30" rows="10"></textarea>
-                <input type="submit" value="verstuur">
+            <h2>Bericht</h2>
+            <textarea name="bericht" id="bericht-box" cols="30" rows="10"></textarea>
+            <input type="submit" value="verstuur">
         </div>
     </form>
 </html>

@@ -36,7 +36,6 @@
     
     <div class="menu-items">
         <?php 
-            
             if (isset($_POST['search'])) {
                 $resultSet = $conn->prepare("SELECT * FROM menu WHERE title LIKE ? OR description LIKE ? ORDER BY title;");
                 $resultSet->execute(['%'.$_POST['search-text'].'%', '%'.$_POST['search-text'].'%']);
