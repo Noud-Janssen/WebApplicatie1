@@ -17,18 +17,24 @@
         require_once('php/config.php');
         require_once('php/login.php');
         $title = 'Contact';
-        require_once('php/nav.php');?>
+        require_once('php/nav.php');
+    
+        if (isset($_POST['verstuur'])) {
+            $prepared = $conn->prepare("INSERT into berichten (onderwerp, email, bericht) VALUES (?,?,?)");
+            $prepared->execute([$_POST['onderwerp'], $_POST['email'], $_POST['bericht']]);
+        }
+    ?>
         
     </body>
     <script src="js/main.js"></script>
     <form action="contact.php" method="post" id="contact-form">
             <h2>Onderwerp</h2>
-            <input type="text" name="onderwerp" id="">
+            <input type="text" name="onderwerp" id="" required>
             <h2>Email</h2>
-            <input type="email" name="email" id="">
+            <input type="email" name="email" id="" required>
             <h2>Bericht</h2>
-            <textarea name="bericht" id="bericht-box" cols="30" rows="10"></textarea>
-            <input type="submit" value="verstuur">
+            <textarea name="bericht" id="bericht-box" cols="30" rows="10" required></textarea>
+            <input type="submit" name="verstuur" value="verstuur" class="submit">
         </div>
     </form>
 </html>

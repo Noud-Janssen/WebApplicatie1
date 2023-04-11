@@ -7,13 +7,18 @@
     if (isset($_POST['login']) && $_POST['username'] !== "" && $_POST['password'] !== "") {
         $query = "SELECT * FROM accounts WHERE username = '".$_POST['username']."';";
         $resultset = $conn->query($query);
-
+        $loginCheck = false;
         if ($result = $resultset->fetch()) {
             if ($result['password'] == $_POST['password']) {
                 $_SESSION['userID'] = $result['id'];
+                $loginCheck = true;
             }
         }
-        
+        if (!$loginCheck) {
+            echo "<script>
+                alert('Verkeerde inlog');
+            </script>";
+        }  
     }
     
 ?>
