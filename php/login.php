@@ -1,12 +1,15 @@
 <?php 
-    $isLoggedIn = false;
+
+    //logging out
     if (isset($_POST['logout'])) {
         session_destroy();
         header("Location: index.php");
     }
+
+    //logging in
     if (isset($_POST['login']) && $_POST['username'] !== "" && $_POST['password'] !== "") {
-        $query = "SELECT * FROM accounts WHERE username = '".$_POST['username']."';";
-        $resultset = $conn->query($query);
+        $resultset = $conn->prepare("SELECT * FROM accounts WHERE username = ? ");
+        $resultset->execute([$_POST['username']]);
         $loginCheck = false;
         if ($result = $resultset->fetch()) {
             if ($result['password'] == $_POST['password']) {
@@ -14,6 +17,7 @@
                 $loginCheck = true;
             }
         }
+
         if (!$loginCheck) {
             echo "<script>
                 alert('Verkeerde inlog');
