@@ -17,39 +17,7 @@ echo "<nav>
             }
 echo "
         </div>
-    </nav>
-    <nav id='mobile'>
-        <div class='link-wrapper'>
-            <a href='index.php'>
-                <?php 
-                    echo file_get_contents('assets/icons/home.svg')
-                ?>
-            </a>
-            <a href='menu.php'>
-                <?php 
-                    echo file_get_contents('assets/icons/menu.svg')
-                ?>
-            </a>
-            <a href='contact.php'>
-                <?php 
-                    echo file_get_contents('assets/icons/contact.svg')
-                ?>
-            </a>";
-    if ($_SESSION['userID'] != 0) {
-        echo "<a href='dashboard.php'>
-            <?php 
-                echo file_get_contents('assets/icons/dashboard.svg')
-            ?>
-            </a>
-            <input type='submit' name='logout' value='logout'>
-            ";
-    } else {
-        echo "<button onclick='toggleLogin()' class='login-button'>
-            <?php 
-                echo file_get_contents('assets/icons/login.svg')
-            ?>
-            </button>";
-    }
+    </nav>";
     echo "  
         </div>
     </nav>
