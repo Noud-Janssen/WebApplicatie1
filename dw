@@ -1,0 +1,119 @@
+[33mcommit f1cdc55562cac4ba0c32c3d7d1445aa3fe785127[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Noud-Janssen <117975100+Noud-Janssen@users.noreply.github.com>
+Date:   Sat Apr 15 13:23:56 2023 +0200
+
+    Update nav.php
+
+[33mcommit cac07210054886a45483fd5d7e4520c6ee68440b[m
+Author: Noud-Janssen <117975100+Noud-Janssen@users.noreply.github.com>
+Date:   Wed Apr 12 11:57:36 2023 +0200
+
+    Update login.php
+
+[33mcommit b17c0d7e7c292e1bc98257e399e6976b961ca2fb[m
+Author: Noud-Janssen <117975100+Noud-Janssen@users.noreply.github.com>
+Date:   Tue Apr 11 19:29:01 2023 +0200
+
+    Added contact formulier
+
+[33mcommit 217fe18bdc7af0e046e7574a61b71ba2864939f1[m
+Author: Noud-Janssen <117975100+Noud-Janssen@users.noreply.github.com>
+Date:   Tue Apr 4 12:44:52 2023 +0200
+
+    asd
+
+[33mcommit 7bdd27c5377a7b93ac62ff146ee3bd2be9519ff3[m
+Author: Noud-Janssen <117975100+Noud-Janssen@users.noreply.github.com>
+Date:   Wed Mar 29 15:13:05 2023 +0200
+
+    dots on i
+
+[33mcommit e78113749174a6c8c6f2650e4239463afe944c8b[m
+Author: Noud-Janssen <117975100+Noud-Janssen@users.noreply.github.com>
+Date:   Tue Mar 28 12:13:27 2023 +0200
+
+    no sql injection
+
+[33mcommit e42839af160056bee3cc5b8fdd8dbe44a69171dc[m
+Author: Noud-Janssen <117975100+Noud-Janssen@users.noreply.github.com>
+Date:   Mon Mar 27 13:03:54 2023 +0200
+
+    Inloggen/uitloggen
+
+[33mcommit 1d2fc89d86ae23019052c06846f1f20dba9b943e[m
+Author: Noud-Janssen <117975100+Noud-Janssen@users.noreply.github.com>
+Date:   Wed Mar 22 15:24:49 2023 +0100
+
+    Sprint 1, update 1
+
+[33mcommit 7ee3096220f1a0f9c61bf90ee9364a37687ff277[m
+Author: Noud-Janssen <117975100+Noud-Janssen@users.noreply.github.com>
+Date:   Tue Mar 21 11:41:54 2023 +0100
+
+    Reservering Added
+
+[33mcommit 3af1dc17da80a548d590ad331acd97dd5008478a[m
+Author: Noud-Janssen <117975100+Noud-Janssen@users.noreply.github.com>
+Date:   Mon Mar 20 13:09:21 2023 +0100
+
+    Update Reserveringen
+
+[33mcommit b0fe96001dcb2fe98b15cc326e24fa46b1431d92[m
+Author: Noud-Janssen <117975100+Noud-Janssen@users.noreply.github.com>
+Date:   Wed Mar 15 14:28:13 2023 +0100
+
+    asd
+
+[33mcommit 8844558f038b232022adccd9d10172376a43091b[m
+Author: Noud-Janssen <117975100+Noud-Janssen@users.noreply.github.com>
+Date:   Tue Mar 14 12:09:20 2023 +0100
+
+    Update dashboard
+
+[33mcommit 344c0d5d593a0284eaabe8db82b221e83bbc135c[m
+Author: Noud-Janssen <117975100+Noud-Janssen@users.noreply.github.com>
+Date:   Mon Mar 13 13:47:20 2023 +0100
+
+    Update and delete
+
+[33mcommit fc0ac396e91ce401938892e2d1b411cd45dcf935[m
+Author: Noud-Janssen <117975100+Noud-Janssen@users.noreply.github.com>
+Date:   Wed Mar 8 14:11:09 2023 +0100
+
+    Added dashboard
+
+[33mcommit 2be0d31b528de6f55a1907c283f252e034b87f17[m
+Author: Noud-Janssen <117975100+Noud-Janssen@users.noreply.github.com>
+Date:   Tue Mar 7 11:44:11 2023 +0100
+
+    Started responsive, added menu php
+
+[33mcommit 9be82f147dd1b582323cd2824a6cd35e7280c85d[m
+Author: Noud-Janssen <117975100+Noud-Janssen@users.noreply.github.com>
+Date:   Mon Mar 6 11:42:20 2023 +0100
+
+    Made Menu Page
+
+[33mcommit fae62803a6996c26dae152dc338a3ce41e10401f[m
+Author: Noud-Janssen <117975100+Noud-Janssen@users.noreply.github.com>
+Date:   Fri Mar 3 11:14:47 2023 +0100
+
+    Added login pop-up
+
+[33mcommit 835a0e18b7a7c82f7548d4f7912e4a9f6d088a2e[m
+Author: Noud-Janssen <117975100+Noud-Janssen@users.noreply.github.com>
+Date:   Fri Mar 3 10:47:23 2023 +0100
+
+    asd
+
+[33mcommit 945d52d6a38a54692d5f505d497325b8489256c5[m
+Author: Noud-Janssen <117975100+Noud-Janssen@users.noreply.github.com>
+Date:   Wed Mar 1 12:42:03 2023 +0100
+
+    working on nav
+
+[33mcommit 373393109ff306d2fad131d3f3426b005c349767[m
+Author: Noud-Janssen <117975100+Noud-Janssen@users.noreply.github.com>
+Date:   Tue Feb 28 11:37:24 2023 +0100
+
+    Initial commit
