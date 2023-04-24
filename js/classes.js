@@ -41,4 +41,3 @@ class adminItemAccount extends HTMLElement {
   
 customElements.define("admin-item", adminItem);
 customElements.define("admin-item-account", adminItemAccount);
-  
